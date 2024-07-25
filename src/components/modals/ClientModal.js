@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Input, Table, Alert } from "reactstrap";
-import RegisterClientModal from "./RegisterClientModal"; // Importa el nuevo componente
+import RegisterClientModal from "./RegisterClientModal";
 import { useApiConstructor } from "../../apiCalls/apiConstructor";
 import useEurekaServices from "../../hooks/useEurekaServices";
 
@@ -23,7 +23,6 @@ const ClientModal = ({ isOpen, onClose, onSelect }) => {
   }, [services]);
 
   useEffect(() => {
-    // Limpia los controles cuando el modal se cierra
     if (!isOpen) {
       setName("");
       setLastname("");
@@ -47,7 +46,7 @@ const ClientModal = ({ isOpen, onClose, onSelect }) => {
 
   const handleRegister = () => {
     setShowRegisterForm(false);
-    handleSearch(); // Refresca la lista de clientes después de registrar uno nuevo
+    handleSearch(); 
   };
 
   return (

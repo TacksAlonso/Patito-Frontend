@@ -89,7 +89,7 @@ const OrderForm = () => {
     if (orderList.length === 0) {
       Swal.fire({
         title: 'Error',
-        text: 'No products in the order.',
+        text: 'No hay productos en la orden',
         icon: 'error',
         confirmButtonText: 'OK'
       });
@@ -106,12 +106,12 @@ const OrderForm = () => {
     }
 
     const isConfirmed = await Swal.fire({
-      title: 'Confirm Order',
-      text: 'Are you sure you want to place this order?',
+      title: 'Confirmar orden',
+      text: 'Estas seguro de que quieres generar la orden?',
       icon: 'question',
       showCancelButton: true,
-      confirmButtonText: 'Yes, place order',
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No'
     });
 
     if (!isConfirmed.isConfirmed) {
@@ -159,7 +159,7 @@ const OrderForm = () => {
         setSubmissionStatus("Error placing order");
         Swal.fire({
           title: 'Error',
-          text: 'There was a problem placing your order.',
+          text: 'Ha ocurrido un problema al crear el pedido',
           icon: 'error',
           confirmButtonText: 'OK'
         });
@@ -170,7 +170,7 @@ const OrderForm = () => {
       setSubmissionStatus("Error placing order");
       Swal.fire({
         title: 'Error',
-        text: 'There was a problem placing your order.',
+        text: 'Ha ocurrido un problema al crear el pedido',
         icon: 'error',
         confirmButtonText: 'OK'
       });
