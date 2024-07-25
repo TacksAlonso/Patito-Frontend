@@ -1,0 +1,1 @@
+export const EUREKA_SERVER_URL = 'http://localhost:8761/eureka/apps';

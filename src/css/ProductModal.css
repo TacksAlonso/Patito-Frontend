@@ -1,0 +1,10 @@
+.modal-body {
+    max-height: 60vh; /* Ajusta según sea necesario */
+    overflow-y: auto; /* Agrega desplazamiento vertical si el contenido es largo */
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end; /* Opcional: alinea el contenido del pie de página a la derecha */
+  }
+  
